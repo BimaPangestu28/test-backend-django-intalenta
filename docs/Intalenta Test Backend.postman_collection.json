@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "326b3a46-d926-4597-9f9d-cbac5e6d33ef",
+		"name": "Intalenta Test Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2572975"
+	},
+	"item": [
+		{
+			"name": "Create Track",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Moonwalk",
+							"type": "text"
+						},
+						{
+							"key": "artist",
+							"value": "Michael Jackson",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Bimbim/Downloads/Music/Y2meta.app - Payung Teduh - Menuju Senja (128 kbps).mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tracks/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tracks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Start Time",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tracks/:id/calculate-start-time/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tracks",
+						":id",
+						"calculate-start-time",
+						""
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "16"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
